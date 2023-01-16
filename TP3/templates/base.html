@@ -6,16 +6,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css"/>
+    <script defer="defer" src="https://pyscript.net/latest/pyscript.js"></script>
     <title>Document</title>
-    {% bootstrap_css %}
-    {% block css %}{% endblock css %}
   </head>
 
   <body>
-    <div class="container">
-      {% block body %}{% endblock body %}
-    </div>
-    {% bootstrap_javascript %}
+    {% block body %}{% endblock body %}
   </body>
 
 </html>
