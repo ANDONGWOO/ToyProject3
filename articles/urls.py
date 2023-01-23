@@ -1,8 +1,7 @@
 from django.urls import path
+from .views import PyscriptHandlerView#파이스크립트
 from . import views
-
-app_name="articles"
-
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", PyscriptHandlerView.as_view()),#파이스크립트
+    path("test/", views.test1, name="test1"),
 ]

@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% load django_bootstrap5 %}
+{% load static %}
 {% block body %}
   <h1>index</h1>
-  <py-script>
-    print(2*1)
-  </py-script>
+  <!-- 파이스크립트 -->
+  <py-script src="{% static 'script.py' %}"></py-script>
 {% endblock body %}
