@@ -8,4 +8,4 @@ class PyscriptHandlerView(View):#파이스크립트
 
 
 def test1(request):
-    return render(request, 'articles/test.html')
+    return render(request, 'articles/test1.html')
