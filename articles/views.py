@@ -4,6 +4,9 @@ from .models import Article,Comment
 from .forms import ArticleForm,CommentForm
 # Create your views here.
 
+
+def test1(request):
+    return render(request, 'articles/test1.html')
 class PyscriptHandlerView(View):#파이스크립트
     def get(self, request):
         article = Article.objects.all()
@@ -12,9 +15,6 @@ class PyscriptHandlerView(View):#파이스크립트
         }
         return render(request, 'articles/index.html' ,context)
 
-
-def test1(request):
-    return render(request, 'articles/test1.html')
 def create(request):
     if request.method == 'POST':
         article_form = ArticleForm(request.POST)
