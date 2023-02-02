@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.views.generic import View #파이스크립트
 from .models import Article,Comment
 from .forms import ArticleForm,CommentForm
+import asyncio
 # Create your views here.
 
 
@@ -51,3 +52,4 @@ def comments_delete(request, article_pk, comment_pk):
     comment = Comment.objects.get(pk=comment_pk)
     comment.delete()
     return redirect('articles:detail', article_pk)
+
