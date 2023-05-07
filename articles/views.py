@@ -6,15 +6,13 @@ import asyncio
 # Create your views here.
 
 
-def test1(request):
+def test21(request):
     return render(request, 'articles/test1.html')
+def test22(request):
+    return render(request, 'articles/test2.html')
 class PyscriptHandlerView(View):#파이스크립트
     def get(self, request):
-        article = Article.objects.all()
-        context={
-            'article':article
-        }
-        return render(request, 'articles/index.html' ,context)
+        return render(request, 'articles/index.html')
 
 def create(request):
     if request.method == 'POST':

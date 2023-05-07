@@ -6,7 +6,8 @@ app_name='articles'
 
 urlpatterns = [
     path("", PyscriptHandlerView.as_view(), name="index" ),#파이스크립트/클래스 형 뷰
-    path("test/", views.test1, name="test1"),
+    path("test1/", views.test21, name="test1"),
+    path("test2/", views.test22, name="test2"),
     path('create/', views.create, name='create'),
     path('<int:article_pk>/', views.detail, name='detail'),
     path('<int:article_pk>/comments/', views.comment_create, name='comment_create'),

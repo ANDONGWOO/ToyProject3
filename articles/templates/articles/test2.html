@@ -5,6 +5,10 @@
   {% comment %} <py-script>
     def test():#연습용 구구단 n=int(input()) for i in range(1,10): print(f'{n} * {i} = {n*i}')
   </py-script>| {% endcomment %}
-  <a href="{% url "articles:test2" %}"><button py-click="test1()" >시작</button>
+  <button py-click="test2()">정지</button>
+  <p id="current-time"></p>
   <py-script src="{% static 'test1.py' %}"></py-script>
+  {% comment %} <py-env>
+    - paths:-/test1.py
+  </py-env>  {% endcomment %}
 {% endblock body %}

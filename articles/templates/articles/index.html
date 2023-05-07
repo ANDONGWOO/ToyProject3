@@ -2,7 +2,7 @@
 {% load django_bootstrap5 %}
 {% load static %}
 {% block body %}
-  <h1>목록</h1>
+  {% comment %} <h1>목록</h1>
   {% for i in article %}
     <div class="card m-3" style="width: 100;">
       <a href="{% url 'articles:detail' i.pk %}">
@@ -14,7 +14,7 @@
         </ul>
       </a>
     </div>
-  {% endfor %}
+  {% endfor %} {% endcomment %}
 
   <!-- 파이스크립트 -->
   <py-script src="{% static 'script.py' %}"></py-script>
